@@ -37,6 +37,9 @@ const delayedColorChange = (newColor, delay, doNext) => {
     }, delay)
 }
 
+//NOTE THE KIND OF NESTING DONE BELOW IS BAD
+//IT CREATE A PROBLEM CALLED CALLBACK HELL WHERE YOU'RE
+//NESTING CALLBACKS
 delayedColorChange('red', 1000, () => {
     delayedColorChange('orange', 1000, () =>{
         delayedColorChange('yellow', 1000, () =>{
