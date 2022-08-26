@@ -15,7 +15,11 @@ const sing = async () => {
     return 'la la la la ';
 }
 
-//chaining async function with the then keyword
-// sing().then((data) => {
-//     console.log("PROMISE RESOLVE WITH: ", data)
-// })
+// chaining async function with the then keyword
+sing().then((data) => {
+    console.log("PROMISE RESOLVE WITH: ", data)
+})
+.catch((err) => {
+    console.log('OH NO, PROMISE REJECTED');
+    console.log(err);
+})
