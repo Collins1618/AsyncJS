@@ -7,10 +7,15 @@ async function hello(){
 
 //declaring an arrow function as asynchronous 
 const sing = async () => {
-    return 'la la la la '
+    // throw new Error('UH OH THAT FAILED');
+
+    //Can also throw a string like so:
+    throw 'OH NO, PROBLEM';
+
+    return 'la la la la ';
 }
 
 //chaining async function with the then keyword
-sing().then((data) => {
-    console.log("PROMISE RESOLVE WITH: ", data)
-})
+// sing().then((data) => {
+//     console.log("PROMISE RESOLVE WITH: ", data)
+// })
