@@ -16,10 +16,32 @@ const sing = async () => {
 }
 
 // chaining async function with the then keyword
-sing().then((data) => {
-    console.log("PROMISE RESOLVE WITH: ", data)
+// sing().then((data) => {
+//     console.log("PROMISE RESOLVE WITH: ", data)
+// })
+// .catch((err) => {
+//     console.log('OH NO, PROMISE REJECTED');
+//     console.log(err);
+// })
+
+
+const login= async (username, password) => {
+    if(!username || !password) {
+        throw 'missing credentials'
+    }
+    if(password === 'corgifeetarecute')
+    {
+        return 'WELCOME'
+    }
+    throw 'Invalid Password'
+}
+
+login('hellow', 'corgifeetarecute')
+.then(msg => {
+    console.log('Logged in');
+    console.log(msg);
 })
-.catch((err) => {
-    console.log('OH NO, PROMISE REJECTED');
+.catch(err => {
+    console.log("ERROR!");
     console.log(err);
 })
